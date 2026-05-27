@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anand Trading Company – Towels, Chaddars & Napkins</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #1a6b5c;
+  --teal-light: #2d9e88;
+  --teal-pale: #e6f4f1;
+  --gold: #e8a820;
+  --warm: #f7f4ef;
+  --white: #ffffff;
+  --text: #1c1c1c;
+  --muted: #666;
+  --border: #e8e3dc;
+  --red: #d94040;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--white);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ── PROMO BAR ── */
+.promo-bar {
+  background: var(--teal-pale);
+  text-align: center;
+  padding: 11px 20px;
+  font-size: .82rem;
+  color: var(--teal);
+  letter-spacing: .3px;
+}
+.promo-bar strong { font-weight: 600; }
+
+/* ── HEADER ── */
+header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 200;
+}
+.header-top {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 6%;
+}
+.header-left {
+  font-size: .82rem; color: var(--muted);
+  display: flex; align-items: center; gap: 6px;
+}
+.header-left svg { width: 14px; height: 14px; }
+.logo {
+  text-align: center; flex: 1;
+}
+.logo-main {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 700;
+  color: var(--teal);
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+.logo-main span { color: var(--gold); }
+.logo-sub {
+  font-size: .7rem; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--muted); margin-top: 3px;
+}
+.header-right {
+  display: flex; align-items: center; gap: 20px;
+}
+.header-right a {
+  text-decoration: none; color: var(--muted); font-size: .82rem;
+  display: flex; align-items: center; gap: 5px; transition: color .2s;
+}
+.header-right a:hover { color: var(--teal); }
+.header-right a svg { width: 18px; height: 18px; }
+.call-btn {
+  background: var(--teal); color: #fff !important;
+  padding: 8px 18px; border-radius: 4px;
+  font-size: .8rem !important; font-weight: 500;
+  letter-spacing: .5px;
+}
+.call-btn:hover { background: var(--teal-light) !important; color: #fff !important; }
+
+/* ── NAV ── */
+nav {
+  border-top: 1px solid var(--border);
+  background: var(--white);
+}
+.nav-inner {
+  display: flex; align-items: center; gap: 0;
+  padding: 0 6%; overflow-x: auto;
+}
+.nav-inner::-webkit-scrollbar { display: none; }
+.nav-link {
+  padding: 16px 24px; font-size: .82rem;
+  letter-spacing: 1.2px; text-transform: uppercase;
+  font-weight: 500; color: var(--text);
+  text-decoration: none; white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  transition: all .2s; cursor: pointer;
+}
+.nav-link:hover { color: var(--teal); border-bottom-color: var(--teal); }
+.nav-link.active { color: var(--teal); border-bottom-color: var(--teal); }
+.nav-link.sale { color: var(--red); }
+.nav-link.sale:hover { border-bottom-color: var(--red); }
+
+/* ── HERO BANNER ── */
+.hero {
+  position: relative;
+  background: linear-gradient(110deg, #0d4a3e 0%, #1a6b5c 40%, #2d9e88 100%);
+  min-height: 520px;
+  display: flex; align-items: center;
+  overflow: hidden;
+  padding: 60px 6%;
+}
+.hero::after {
+  content: '';
+  position: absolute; right: 0; top: 0; bottom: 0; width: 50%;
+  background: url("data:image/svg+xml,%3Csvg width='400' height='520' viewBox='0 0 400 520' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='520' fill='%232d9e88' opacity='0.3'/%3E%3Ccircle cx='200' cy='260' r='200' fill='%23e8a820' opacity='0.06'/%3E%3C/svg%3E") no-repeat center/cover;
+}
+.hero-content { position: relative; z-index: 2; max-width: 560px; }
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,.15); color: #fff;
+  padding: 7px 18px; border-radius: 30px;
+  font-size: .72rem; letter-spacing: 2.5px; text-transform: uppercase;
+  margin-bottom: 24px; border: 1px solid rgba(255,255,255,.25);
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  color: #fff; line-height: 1.1;
+  margin-bottom: 18px; font-weight: 600;
+}
+.hero h1 em { color: var(--gold); font-style: normal; }
+.hero p { color: rgba(255,255,255,.8); font-size: 1rem; line-height: 1.7; margin-bottom: 32px; font-weight: 300; }
+.hero-contact {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.hero-phone {
+  background: var(--gold); color: #1c1c1c;
+  padding: 13px 32px; border-radius: 4px;
+  font-size: .9rem; font-weight: 600; text-decoration: none;
+  letter-spacing: .5px; transition: all .25s;
+  display: flex; align-items: center; gap: 8px;
+}
+.hero-phone:hover { background: #f0b830; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,168,32,.4); }
+.hero-note { color: rgba(255,255,255,.65); font-size: .8rem; }
+
+/* towel hanging visual */
+.hero-visual {
+  position: absolute; right: 6%; top: 50%; transform: translateY(-50%);
+  display: flex; gap: 12px; align-items: flex-start; z-index: 1;
+  opacity: .9;
+}
+.towel-hang {
+  width: 56px; height: 260px; border-radius: 6px 6px 14px 14px;
+  position: relative; top: 0;
+}
+.towel-hang:nth-child(1) { background: #4dc9a8; top: 20px; }
+.towel-hang:nth-child(2) { background: #444; top: 0; }
+.towel-hang:nth-child(3) { background: #b8a090; top: 30px; }
+.towel-hang:nth-child(4) { background: #e8c4a0; top: 10px; }
+.towel-hang:nth-child(5) { background: #e8d080; top: 40px; }
+.towel-hang::before {
+  content: ''; position: absolute; top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 10px; height: 30px;
+  background: rgba(255,255,255,.3);
+  border-radius: 0 0 6px 6px;
+}
+
+/* ── SECTION ── */
+.section { padding: 72px 6%; }
+.section.alt { background: var(--warm); }
+.section-head { margin-bottom: 44px; }
+.section-head h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  color: var(--text); font-weight: 600;
+}
+.section-head p { color: var(--muted); margin-top: 6px; font-size: .9rem; }
+.section-line { width: 44px; height: 3px; background: var(--teal); margin-top: 12px; border-radius: 2px; }
+
+/* ── PRODUCT GRID (myTrident style) ── */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+@media (max-width: 1100px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 780px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .product-grid { grid-template-columns: 1fr; } }
+
+.product-card {
+  background: var(--white);
+  border-radius: 8px; overflow: hidden;
+  border: 1px solid var(--border);
+  transition: box-shadow .3s, transform .3s;
+  display: none;
+}
+.product-card.show { display: block; }
+.product-card:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,.10);
+  transform: translateY(-4px);
+}
+.card-img {
+  position: relative;
+  height: 220px;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; font-size: 5rem;
+}
+.card-badge {
+  position: absolute; top: 12px; left: 12px;
+  background: var(--white); color: var(--teal);
+  font-size: .65rem; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; padding: 5px 12px;
+  border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  line-height: 1.3;
+}
+.card-badge span { display: block; color: var(--gold); font-size: .75rem; font-weight: 700; }
+.card-badge.new-tag { background: var(--teal); color: #fff; }
+.card-badge.new-tag span { color: rgba(255,255,255,.8); }
+.card-body { padding: 18px 18px 22px; }
+.card-body h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem; font-weight: 600;
+  color: var(--text); margin-bottom: 5px;
+}
+.card-sub { color: var(--teal); font-size: .78rem; font-weight: 500; }
+.card-desc { color: var(--muted); font-size: .8rem; line-height: 1.6; margin-top: 8px; }
+.color-dots { display: flex; gap: 6px; margin-top: 12px; }
+.dot {
+  width: 14px; height: 14px; border-radius: 50%;
+  border: 2px solid rgba(0,0,0,.08); cursor: default;
+}
+
+/* ── CATEGORY TABS ── */
+.cat-tabs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
+.cat-tab {
+  padding: 9px 24px; border: 1.5px solid var(--border);
+  background: var(--white); border-radius: 30px;
+  font-size: .8rem; letter-spacing: 1px; text-transform: uppercase;
+  font-weight: 500; cursor: pointer; color: var(--muted);
+  transition: all .2s;
+}
+.cat-tab:hover { border-color: var(--teal); color: var(--teal); }
+.cat-tab.active { background: var(--teal); color: #fff; border-color: var(--teal); }
+
+/* ── WHY US ── */
+.why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+@media (max-width: 860px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+.why-card {
+  text-align: center; padding: 36px 20px;
+  border-radius: 8px; border: 1px solid var(--border);
+  background: var(--white);
+  transition: box-shadow .25s;
+}
+.why-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,.07); }
+.why-icon { font-size: 2.4rem; margin-bottom: 14px; }
+.why-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.why-card p { color: var(--muted); font-size: .82rem; line-height: 1.7; }
+
+/* ── CONTACT SECTION ── */
+.contact-section {
+  background: linear-gradient(135deg, #0d4a3e 0%, #1a6b5c 100%);
+  padding: 80px 6%;
+}
+.contact-inner {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+}
+@media (max-width: 768px) { .contact-inner { grid-template-columns: 1fr; gap: 40px; } }
+.contact-text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: #fff; font-weight: 600; margin-bottom: 14px;
+}
+.contact-text p { color: rgba(255,255,255,.75); font-size: .95rem; line-height: 1.8; margin-bottom: 32px; }
+.contact-details { display: flex; flex-direction: column; gap: 18px; }
+.contact-item { display: flex; align-items: flex-start; gap: 14px; }
+.contact-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  background: rgba(255,255,255,.12); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+}
+.contact-item strong { display: block; color: #fff; font-size: .85rem; font-weight: 600; margin-bottom: 2px; }
+.contact-item span { color: rgba(255,255,255,.7); font-size: .85rem; }
+.contact-card {
+  background: var(--white); border-radius: 12px; padding: 44px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.2);
+}
+.contact-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem; font-weight: 600; color: var(--text); margin-bottom: 6px;
+}
+.contact-card p { color: var(--muted); font-size: .85rem; margin-bottom: 28px; }
+.phone-big {
+  background: var(--teal); color: #fff;
+  padding: 18px 28px; border-radius: 8px;
+  text-align: center; text-decoration: none; display: block;
+  font-size: 1.5rem; font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; letter-spacing: 1px;
+  transition: background .25s;
+  margin-bottom: 14px;
+}
+.phone-big:hover { background: var(--teal-light); }
+.phone-big small { display: block; font-family: 'DM Sans', sans-serif; font-size: .75rem; font-weight: 400; opacity: .8; margin-bottom: 4px; letter-spacing: 2px; text-transform: uppercase; }
+.whatsapp-btn {
+  background: #25d366; color: #fff;
+  padding: 14px 28px; border-radius: 8px;
+  text-align: center; text-decoration: none; display: block;
+  font-size: .9rem; font-weight: 600;
+  transition: background .25s;
+}
+.whatsapp-btn:hover { background: #1fb959; }
+.timing {
+  margin-top: 20px; padding: 14px 18px;
+  background: var(--warm); border-radius: 6px;
+  font-size: .8rem; color: var(--muted); text-align: center;
+}
+.timing strong { color: var(--teal); }
+
+/* ── FOOTER ── */
+footer {
+  background: #0d1a17; color: rgba(255,255,255,.55);
+  padding: 48px 6% 28px;
+}
+.footer-top { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; margin-bottom: 36px; }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: var(--teal-light); }
+.footer-logo span { color: var(--gold); }
+.footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
+.footer-links a { color: rgba(255,255,255,.45); font-size: .8rem; text-decoration: none; transition: color .2s; }
+.footer-links a:hover { color: var(--teal-light); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 22px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: .76rem; }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+.hero-content > * { animation: fadeUp .65s both; }
+.hero-content > *:nth-child(1) { animation-delay: .1s; }
+.hero-content > *:nth-child(2) { animation-delay: .22s; }
+.hero-content > *:nth-child(3) { animation-delay: .34s; }
+.hero-content > *:nth-child(4) { animation-delay: .46s; }
+.hero-content > *:nth-child(5) { animation-delay: .58s; }
+
+@media (max-width: 768px) {
+  .hero-visual { display: none; }
+  .header-left { display: none; }
+  .nav-link { padding: 12px 16px; font-size: .75rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Promo Bar -->
+<div class="promo-bar">
+  🎉 <strong>Wholesale Rates Available</strong> — Bulk orders welcome for Hotels, Hospitals & Retailers &nbsp;|&nbsp; Call: <strong>9890932872</strong>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="header-top">
+    <div class="header-left">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.28 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.19 1.17h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 5.34 5.34l1.28-1.28a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 14.88z"/></svg>
+      9890932872
+    </div>
+
+    <div class="logo">
+      <div class="logo-main"><span>Anand</span> Trading Company</div>
+      <div class="logo-sub">my ♥ for home &nbsp;·&nbsp; Quality Textiles</div>
+    </div>
+
+    <div class="header-right">
+      <a href="#contact" class="call-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.28 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.19 1.17h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 5.34 5.34l1.28-1.28a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 14.88z"/></svg>
+        Contact Us
+      </a>
+    </div>
+  </div>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-link active" onclick="filterCat('all',this)">All Products</a>
+      <a class="nav-link" onclick="filterCat('towel',this)">Towels</a>
+      <a class="nav-link" onclick="filterCat('chaddar',this)">Chaddars</a>
+      <a class="nav-link" onclick="filterCat('napkin',this)">Napkins</a>
+      <a class="nav-link" onclick="filterCat('bestseller',this)">Bestsellers</a>
+      <a class="nav-link sale" onclick="filterCat('new',this)">New Arrivals</a>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero Banner -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">✦ Quality Textiles Since Years</div>
+    <h1>Premium <em>Towels,</em><br>Chaddars &amp; Napkins</h1>
+    <p>Finest cotton fabrics for homes, hotels, hospitals &amp; retailers.<br>Wholesale rates · Bulk orders welcome.</p>
+    <div class="hero-contact">
+      <a href="tel:9890932872" class="hero-phone">
+        📞 9890932872
+      </a>
+      <span class="hero-note">Call or WhatsApp for pricing</span>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="towel-hang"></div>
+    <div class="towel-hang"></div>
+    <div class="towel-hang"></div>
+    <div class="towel-hang"></div>
+    <div class="towel-hang"></div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section class="section" id="products">
+  <div class="section-head">
+    <h2>Our Collection</h2>
+    <p>Browse our full range of towels, chaddars and napkins — all at wholesale rates.</p>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="cat-tabs">
+    <button class="cat-tab active" onclick="filterCat('all',this)">All</button>
+    <button class="cat-tab" onclick="filterCat('towel',this)">Towels</button>
+    <button class="cat-tab" onclick="filterCat('chaddar',this)">Chaddars</button>
+    <button class="cat-tab" onclick="filterCat('napkin',this)">Napkins</button>
+    <button class="cat-tab" onclick="filterCat('bestseller',this)">Bestsellers</button>
+    <button class="cat-tab" onclick="filterCat('new',this)">New Arrivals</button>
+  </div>
+
+  <div class="product-grid" id="grid">
+
+    <!-- ══ TOWELS ══ -->
+
+    <div class="product-card show" data-cat="towel bestseller">
+      <div class="card-img" style="background:linear-gradient(145deg,#e2ede9,#b0d4c8)">🏨</div>
+      <div class="card-badge">Best Seller<span>Starting ₹499</span></div>
+      <div class="card-body">
+        <h3>Soft Comfort Bath Towel</h3>
+        <div class="card-sub">509 GSM | Best Seller</div>
+        <div class="card-desc">Air-rich cotton, stays soft wash after wash. 70×140 cm. Ideal for homes & hotels.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#4dc9a8" title="Teal"></div>
+          <div class="dot" style="background:#555" title="Charcoal"></div>
+          <div class="dot" style="background:#7e4f8a" title="Purple"></div>
+          <div class="dot" style="background:#c0392b" title="Maroon"></div>
+          <div class="dot" style="background:#fff;border-color:#ccc" title="White"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel new">
+      <div class="card-img" style="background:linear-gradient(145deg,#d4e4f0,#8ab4d4)">🧖</div>
+      <div class="card-badge new-tag">New Arrival<span>Turkish Cotton</span></div>
+      <div class="card-body">
+        <h3>Turkish Cotton Bath Towel</h3>
+        <div class="card-sub">800 GSM | New Arrivals</div>
+        <div class="card-desc">Made with authentic Turkish cotton. Supremely plush, ultra-absorbent, 70×140 cm.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#7ab0d0"></div>
+          <div class="dot" style="background:#d0b07a"></div>
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel bestseller">
+      <div class="card-img" style="background:linear-gradient(145deg,#f0ece4,#d8cdb4)">🛁</div>
+      <div class="card-badge">Best Seller<span>Towels</span></div>
+      <div class="card-body">
+        <h3>Luxury Soft & Plush Towel</h3>
+        <div class="card-sub">625 GSM | Soft & Plush</div>
+        <div class="card-desc">Premium white hotel-grade towel. 90×180 cm. Perfect for 5-star hospitality use.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+          <div class="dot" style="background:#f5f0e8"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel new">
+      <div class="card-img" style="background:linear-gradient(145deg,#e8e4d4,#c8bfa0)">🎨</div>
+      <div class="card-badge new-tag">Jacquard<span>Collection</span></div>
+      <div class="card-body">
+        <h3>Symphony Jacquard Towel</h3>
+        <div class="card-sub">625 GSM | Jacquard Collection</div>
+        <div class="card-desc">Woven geometric jacquard pattern, striped border, elegant design for premium gifting.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#d4c090"></div>
+          <div class="dot" style="background:#2c3e50"></div>
+          <div class="dot" style="background:#c8a090"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel">
+      <div class="card-img" style="background:linear-gradient(145deg,#d8edd8,#98c898)">🌿</div>
+      <div class="card-badge new-tag">Bamboo<span>Cotton</span></div>
+      <div class="card-body">
+        <h3>Bamboo Cotton Towel</h3>
+        <div class="card-sub">500 GSM | Eco Friendly</div>
+        <div class="card-desc">Bamboo-cotton blend, naturally antibacterial, gentle on sensitive skin, 60×120 cm.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#98c898"></div>
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+          <div class="dot" style="background:#f0e090"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel">
+      <div class="card-img" style="background:linear-gradient(145deg,#f0e0d0,#e0b890)">🌸</div>
+      <div class="card-badge new-tag">Scented<span>Towels</span></div>
+      <div class="card-body">
+        <h3>Fragrance Infused Towel</h3>
+        <div class="card-sub">450 GSM | Scented Collection</div>
+        <div class="card-desc">Long-lasting subtle fragrance woven in, 60×120 cm. Lavender, Rose & Jasmine.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#d4a0c0"></div>
+          <div class="dot" style="background:#a0c4d4"></div>
+          <div class="dot" style="background:#d4c0a0"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel">
+      <div class="card-img" style="background:linear-gradient(145deg,#d0e8f0,#80b8d0)">🏊</div>
+      <div class="card-body">
+        <h3>Sports Quick-Dry Towel</h3>
+        <div class="card-sub">350 GSM | Sports Series</div>
+        <div class="card-desc">Microfibre blend, ultra-fast drying, 80×160 cm. Gym, pool & outdoor sports.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#80b8d0"></div>
+          <div class="dot" style="background:#d08080"></div>
+          <div class="dot" style="background:#80d0a0"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel">
+      <div class="card-img" style="background:linear-gradient(145deg,#fce8d0,#f0c080)">☀️</div>
+      <div class="card-body">
+        <h3>Beach & Pool Towel</h3>
+        <div class="card-sub">Velour | Beach Collection</div>
+        <div class="card-desc">90×170 cm, vibrant reactive print, velour face, sand-resistant terry back.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#f0c080"></div>
+          <div class="dot" style="background:#80c0d0"></div>
+          <div class="dot" style="background:#d08090"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel">
+      <div class="card-img" style="background:linear-gradient(145deg,#f0d8e8,#d090b0)">👶</div>
+      <div class="card-body">
+        <h3>Baby Hooded Bath Towel</h3>
+        <div class="card-sub">Organic | Baby Range</div>
+        <div class="card-desc">60×120 cm with hood, GOTS organic cotton, ultra-soft, safe for newborns.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#f0d0d8"></div>
+          <div class="dot" style="background:#d0e8d0"></div>
+          <div class="dot" style="background:#f0f0d0"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel">
+      <div class="card-img" style="background:linear-gradient(145deg,#d8d0e8,#9080c0)">💆</div>
+      <div class="card-body">
+        <h3>Spa & Salon Towel Set</h3>
+        <div class="card-sub">550 GSM | Spa Collection</div>
+        <div class="card-desc">6-piece luxury set (2 bath + 2 hand + 2 face). Uniform salon white or custom colours.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+          <div class="dot" style="background:#9080c0"></div>
+          <div class="dot" style="background:#d0a080"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel">
+      <div class="card-img" style="background:linear-gradient(145deg,#d8e8d0,#98b888)">🏥</div>
+      <div class="card-body">
+        <h3>Hospital Grade Hand Towel</h3>
+        <div class="card-sub">400 GSM | Institutional</div>
+        <div class="card-desc">40×60 cm, bleach-safe 100% cotton, clinic & hospital standard, bulk packs available.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+          <div class="dot" style="background:#98b888"></div>
+          <div class="dot" style="background:#88a8b8"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel">
+      <div class="card-img" style="background:linear-gradient(145deg,#f8f0d8,#e8d090)">🏆</div>
+      <div class="card-body">
+        <h3>Gold Border Luxury Towel</h3>
+        <div class="card-sub">550 GSM | Premium Gift</div>
+        <div class="card-desc">70×140 cm, metallic gold woven border, premium gifting collection, box packaging.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#e8d090"></div>
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+          <div class="dot" style="background:#8b3a12"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel">
+      <div class="card-img" style="background:linear-gradient(145deg,#e8f0d8,#b0c890)">🕌</div>
+      <div class="card-body">
+        <h3>Namaz / Wuzu Towel</h3>
+        <div class="card-sub">300 GSM | Compact</div>
+        <div class="card-desc">40×80 cm, quick-dry, carry loop, ideal for ablution & mosque use. Light & portable.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+          <div class="dot" style="background:#b0c890"></div>
+          <div class="dot" style="background:#90b0c8"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel">
+      <div class="card-img" style="background:linear-gradient(145deg,#e8e0d0,#c8b890)">✨</div>
+      <div class="card-body">
+        <h3>Waffle Weave Towel</h3>
+        <div class="card-sub">280 GSM | Waffle Collection</div>
+        <div class="card-desc">Honeycomb waffle texture, fast-drying, lint-free. 65×130 cm. Modern minimal design.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#c8b890"></div>
+          <div class="dot" style="background:#90a8b8"></div>
+          <div class="dot" style="background:#b8c890"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel bestseller">
+      <div class="card-img" style="background:linear-gradient(145deg,#e0d8f0,#b0a0d0)">🌙</div>
+      <div class="card-badge">Bulk Deal<span>12 pcs pack</span></div>
+      <div class="card-body">
+        <h3>Plain White Bulk Towel Pack</h3>
+        <div class="card-sub">350 GSM | Pack of 12</div>
+        <div class="card-desc">50×90 cm each, salon & gym-grade, bleach-resistant, most popular wholesale item.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel">
+      <div class="card-img" style="background:linear-gradient(145deg,#d8f0e8,#80c0a0)">🌱</div>
+      <div class="card-body">
+        <h3>Organic Certified Towel Set</h3>
+        <div class="card-sub">GOTS Certified | Eco Range</div>
+        <div class="card-desc">3-piece set (bath+hand+face), certified organic cotton, eco-safe dyes, recycled packaging.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#80c0a0"></div>
+          <div class="dot" style="background:#d0b080"></div>
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel">
+      <div class="card-img" style="background:linear-gradient(145deg,#d0d8f0,#6878c0)">🔵</div>
+      <div class="card-body">
+        <h3>Dobby Stripe Border Towel</h3>
+        <div class="card-sub">450 GSM | Classic Series</div>
+        <div class="card-desc">70×130 cm, traditional dobby-woven stripe border, classic home & hotel styling.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#6878c0"></div>
+          <div class="dot" style="background:#c09068"></div>
+          <div class="dot" style="background:#8b3a12"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel">
+      <div class="card-img" style="background:linear-gradient(145deg,#f0d8d8,#d09090)">🌺</div>
+      <div class="card-body">
+        <h3>Floral Print Ladies Towel</h3>
+        <div class="card-sub">400 GSM | Ladies Collection</div>
+        <div class="card-desc">60×120 cm, reactive floral print, colourfast, premium gifting. Ladies favourite design.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#d09090"></div>
+          <div class="dot" style="background:#a080c0"></div>
+          <div class="dot" style="background:#90c0d0"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel">
+      <div class="card-img" style="background:linear-gradient(145deg,#e0f0d8,#90c070)">🏫</div>
+      <div class="card-body">
+        <h3>Hostel & School Towel Pack</h3>
+        <div class="card-sub">300 GSM | Pack of 6</div>
+        <div class="card-desc">50×80 cm each, durable & colourfast, budget-friendly bulk pack for institutions.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#90c070"></div>
+          <div class="dot" style="background:#6090c0"></div>
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="towel new">
+      <div class="card-img" style="background:linear-gradient(145deg,#f0e8d0,#e0c080)">🎀</div>
+      <div class="card-badge new-tag">Embroidered<span>Special Edition</span></div>
+      <div class="card-body">
+        <h3>Embroidered Guest Towel</h3>
+        <div class="card-sub">450 GSM | Gift Collection</div>
+        <div class="card-desc">30×50 cm, floral machine embroidery border, 100% Egyptian cotton, gift-ready.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+          <div class="dot" style="background:#d0a080"></div>
+          <div class="dot" style="background:#d0809a"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ CHADDARS ══ -->
+
+    <div class="product-card show" data-cat="chaddar bestseller">
+      <div class="card-img" style="background:linear-gradient(145deg,#f0ece4,#d8ccb4)">🛏️</div>
+      <div class="card-badge">Best Seller<span>Cotton Chaddar</span></div>
+      <div class="card-body">
+        <h3>Classic Cotton Chaddar</h3>
+        <div class="card-sub">200 TC | Everyday Comfort</div>
+        <div class="card-desc">Single 152×228 cm, breathable plain-weave cotton, cool & comfortable year-round.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+          <div class="dot" style="background:#d0b880"></div>
+          <div class="dot" style="background:#8098b0"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="chaddar">
+      <div class="card-img" style="background:linear-gradient(145deg,#d0d8f0,#6080d0)">❄️</div>
+      <div class="card-body">
+        <h3>Winter Fleece Chaddar</h3>
+        <div class="card-sub">Plush Fleece | Winter Collection</div>
+        <div class="card-desc">Double 180×230 cm, anti-pilling plush fleece, ultra-warm, super soft.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#6080d0"></div>
+          <div class="dot" style="background:#8b3a12"></div>
+          <div class="dot" style="background:#202020"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="chaddar new">
+      <div class="card-img" style="background:linear-gradient(145deg,#f8f0d8,#e8c868)">🌟</div>
+      <div class="card-badge new-tag">New Arrival<span>Satin Finish</span></div>
+      <div class="card-body">
+        <h3>Silk-Touch Satin Chaddar</h3>
+        <div class="card-sub">Satin Weave | Luxury Feel</div>
+        <div class="card-desc">Double 180×230 cm, silky smooth satin finish, elegant sheen, premium gifting.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#e8c868"></div>
+          <div class="dot" style="background:#d090b0"></div>
+          <div class="dot" style="background:#9090d0"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="chaddar">
+      <div class="card-img" style="background:linear-gradient(145deg,#d8f0d0,#80c860)">🌻</div>
+      <div class="card-body">
+        <h3>Lawn Printed Summer Chaddar</h3>
+        <div class="card-sub">Lawn Cotton | Summer Range</div>
+        <div class="card-desc">Single 152×228 cm, lightweight lawn, vivid floral prints, breathable & cool.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#80c860"></div>
+          <div class="dot" style="background:#e8c068"></div>
+          <div class="dot" style="background:#d08090"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="chaddar bestseller">
+      <div class="card-img" style="background:linear-gradient(145deg,#e8d0c8,#c09080)">🧵</div>
+      <div class="card-badge">Hand Crafted<span>Block Print</span></div>
+      <div class="card-body">
+        <h3>Hand Block Printed Chaddar</h3>
+        <div class="card-sub">Artisan Crafted | 152×228 cm</div>
+        <div class="card-desc">Traditional hand-block printed design, natural dyes, single size, artisan-made.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#c09080"></div>
+          <div class="dot" style="background:#8090c0"></div>
+          <div class="dot" style="background:#d0b080"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="chaddar new">
+      <div class="card-img" style="background:linear-gradient(145deg,#f0d8e8,#d080a0)">🌺</div>
+      <div class="card-badge new-tag">Bridal<span>Special</span></div>
+      <div class="card-body">
+        <h3>Embroidered Bridal Chaddar</h3>
+        <div class="card-sub">Machine Embroidery | Gift Box</div>
+        <div class="card-desc">Double 180×230 cm, intricate embroidery all-over, gift-boxed for weddings & events.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#d080a0"></div>
+          <div class="dot" style="background:#d0a060"></div>
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="chaddar">
+      <div class="card-img" style="background:linear-gradient(145deg,#d0e8f0,#70a8c0)">🌊</div>
+      <div class="card-body">
+        <h3>Voile Stripe Summer Chaddar</h3>
+        <div class="card-sub">Voile Fabric | Sheer Breezy</div>
+        <div class="card-desc">Single 152×228 cm, sheer voile with woven stripe, airy & light for hot summers.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#70a8c0"></div>
+          <div class="dot" style="background:#d0b880"></div>
+          <div class="dot" style="background:#d08090"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="chaddar">
+      <div class="card-img" style="background:linear-gradient(145deg,#f0e0d0,#e0a870)">🍂</div>
+      <div class="card-body">
+        <h3>Wool Blend Tartan Chaddar</h3>
+        <div class="card-sub">Wool Blend | Kashmiri Style</div>
+        <div class="card-desc">Double 180×230 cm, classic tartan check, warm wool blend, Kashmiri-inspired design.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#8b3a12"></div>
+          <div class="dot" style="background:#d0b080"></div>
+          <div class="dot" style="background:#202020"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="chaddar">
+      <div class="card-img" style="background:linear-gradient(145deg,#f0eed8,#d8d090)">✨</div>
+      <div class="card-body">
+        <h3>Dobby Border Double Chaddar</h3>
+        <div class="card-sub">200 TC | Classic Border</div>
+        <div class="card-desc">Double 180×230 cm, woven dobby geometric border, 200 TC, crisp & comfortable.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#d8d090"></div>
+          <div class="dot" style="background:#6080c0"></div>
+          <div class="dot" style="background:#d08090"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="chaddar bestseller">
+      <div class="card-img" style="background:linear-gradient(145deg,#d8e8d8,#90b890)">🏫</div>
+      <div class="card-badge">Bulk Deal<span>Pack of 6</span></div>
+      <div class="card-body">
+        <h3>Hostel / Bulk Chaddar Pack</h3>
+        <div class="card-sub">150 TC | Institutional</div>
+        <div class="card-desc">Pack of 6, single size, durable plain-weave, popular for hostels, hospitals & rentals.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+          <div class="dot" style="background:#8090c0"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ NAPKINS ══ -->
+
+    <div class="product-card show" data-cat="napkin bestseller">
+      <div class="card-img" style="background:linear-gradient(145deg,#f0ece4,#d8cbb4)">🍽️</div>
+      <div class="card-badge">Best Seller<span>Dining Napkin</span></div>
+      <div class="card-body">
+        <h3>Classic White Dinner Napkin</h3>
+        <div class="card-sub">45×45 cm | Restaurant Grade</div>
+        <div class="card-desc">100% cotton, bleach-safe, hotel & restaurant standard. Pack of 12 available.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+          <div class="dot" style="background:#f8f0e8"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="napkin">
+      <div class="card-img" style="background:linear-gradient(145deg,#d0e8d8,#80b890)">🍀</div>
+      <div class="card-body">
+        <h3>Coloured Cotton Napkin Set</h3>
+        <div class="card-sub">40×40 cm | Home Dining</div>
+        <div class="card-desc">Set of 6 in matching colours, soft cotton, perfect for everyday family dining tables.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#80b890"></div>
+          <div class="dot" style="background:#b0a080"></div>
+          <div class="dot" style="background:#90a8c0"></div>
+          <div class="dot" style="background:#c09090"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="napkin new">
+      <div class="card-img" style="background:linear-gradient(145deg,#f8e8d8,#e8b890)">🌾</div>
+      <div class="card-badge new-tag">Linen Blend<span>Premium</span></div>
+      <div class="card-body">
+        <h3>Linen Blend Napkin</h3>
+        <div class="card-sub">45×45 cm | Fine Dining</div>
+        <div class="card-desc">Cotton-linen blend, natural texture, premium fine-dining presentation, easy-iron.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#e8b890"></div>
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+          <div class="dot" style="background:#90a8b0"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="napkin">
+      <div class="card-img" style="background:linear-gradient(145deg,#e8d8f0,#b090c8)">🎨</div>
+      <div class="card-body">
+        <h3>Printed Cocktail Napkin Set</h3>
+        <div class="card-sub">25×25 cm | Cocktail Size</div>
+        <div class="card-desc">Set of 12 small cocktail napkins with cheerful prints. Party, banquet & event use.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#b090c8"></div>
+          <div class="dot" style="background:#90c8b0"></div>
+          <div class="dot" style="background:#e8c090"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="napkin">
+      <div class="card-img" style="background:linear-gradient(145deg,#d8f0e8,#70c0a0)">🌿</div>
+      <div class="card-body">
+        <h3>Organic Kitchen Napkin</h3>
+        <div class="card-sub">GOTS Certified | Kitchen</div>
+        <div class="card-desc">40×60 cm, GOTS organic cotton, waffle-weave, multipurpose kitchen & dining use.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#70c0a0"></div>
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+          <div class="dot" style="background:#e8d090"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="napkin bestseller">
+      <div class="card-img" style="background:linear-gradient(145deg,#f0e8d0,#d8c080)">🏨</div>
+      <div class="card-badge">Bulk Pack<span>24 pcs</span></div>
+      <div class="card-body">
+        <h3>Hotel Napkin Bulk Pack</h3>
+        <div class="card-sub">45×45 cm | Pack of 24</div>
+        <div class="card-desc">Plain white, restaurant & hotel-grade, bleach-fast, wrinkle-resistant 200 TC cotton.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card show" data-cat="napkin new">
+      <div class="card-img" style="background:linear-gradient(145deg,#f0d8d8,#d09090)">🌸</div>
+      <div class="card-badge new-tag">Embroidered<span>Gift Set</span></div>
+      <div class="card-body">
+        <h3>Embroidered Napkin Gift Set</h3>
+        <div class="card-sub">40×40 cm | Set of 6</div>
+        <div class="card-desc">Floral corner embroidery, gift-boxed set of 6, perfect housewarming or wedding gift.</div>
+        <div class="color-dots">
+          <div class="dot" style="background:#fff;border-color:#ccc"></div>
+          <div class="dot" style="background:#d090a0"></div>
+          <div class="dot" style="background:#d0b080"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Why Us -->
+<section class="section alt" id="why">
+  <div class="section-head">
+    <h2>Why Choose Anand Trading?</h2>
+    <p>Your trusted partner for quality textile products at wholesale rates.</p>
+    <div class="section-line"></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">🏭</div>
+      <h3>Direct from Mill</h3>
+      <p>We source straight from premium textile mills, eliminating middlemen to give you the best rates on every product.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🌟</div>
+      <h3>Guaranteed Quality</h3>
+      <p>Every towel, chaddar and napkin passes strict quality inspection. 100% combed cotton with certified dyes.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🚚</div>
+      <h3>Fast Nationwide Delivery</h3>
+      <p>Quick dispatch, nationwide delivery. Bulk orders packed securely and shipped on time, every time.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">💰</div>
+      <h3>Wholesale Pricing</h3>
+      <p>Special bulk rates for retailers, hotels, hospitals and exporters. Volume discounts available on all products.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-text">
+      <h2>Get in Touch with Us</h2>
+      <p>For product enquiries, wholesale pricing, bulk orders, or any questions — reach out to us directly. We are here to help.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <strong>Phone / WhatsApp</strong>
+            <span>9890932872</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🏢</div>
+          <div>
+            <strong>Company</strong>
+            <span>Anand Trading Company</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <strong>Business Hours</strong>
+            <span>Monday – Saturday &nbsp;|&nbsp; 9:00 AM – 8:00 PM</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📦</div>
+          <div>
+            <strong>Speciality</strong>
+            <span>Towels · Chaddars · Napkins · Wholesale &amp; Retail</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <h3>Call or WhatsApp Us</h3>
+      <p>Our team is ready to assist you with product details, samples and pricing.</p>
+      <a href="tel:9890932872" class="phone-big">
+        <small>Tap to Call</small>
+        📞 9890932872
+      </a>
+      <a href="https://wa.me/919890932872" target="_blank" class="whatsapp-btn">
+        💬 &nbsp; Chat on WhatsApp
+      </a>
+      <div class="timing">
+        Available &nbsp;<strong>Mon – Sat, 9 AM to 8 PM</strong>&nbsp; for orders &amp; enquiries
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo"><span>Anand</span> Trading Company</div>
+    <div class="footer-links">
+      <a href="#products">Towels</a>
+      <a href="#products">Chaddars</a>
+      <a href="#products">Napkins</a>
+      <a href="#why">About Us</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Anand Trading Company. All rights reserved.</p>
+    <p>📞 9890932872 &nbsp;·&nbsp; Quality Textiles — Towels, Chaddars & Napkins</p>
+  </div>
+</footer>
+
+<script>
+function filterCat(cat, el) {
+  // Update nav links
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  // Update cat tabs
+  document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+  if (el) el.classList.add('active');
+
+  document.querySelectorAll('.product-card').forEach(card => {
+    const cats = card.dataset.cat || '';
+    if (cat === 'all') {
+      card.classList.add('show');
+    } else {
+      card.classList.toggle('show', cats.includes(cat));
+    }
+  });
+  // Scroll to grid
+  document.getElementById('products').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+</body>
+</html>
